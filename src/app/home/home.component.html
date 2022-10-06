@@ -1,0 +1,74 @@
+<section class="HeroSection">
+    <div class="HeroSectionInner">
+       <h1 class=" HeroSectionHeader">Free Stock Photos</h1>
+       <h2 class=" HeroSectionSubHeader">A large library of photos <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer" class="sc-d8745830-4 eaKrQK">available images.</a> Provided by inspiring photographers</h2>
+       <div data-aid="search-bar" class=" HeroSectionSearch">
+          <form class="HeroSectionSearchForm" (ngSubmit)="searchImage(searchPage)">
+             <button type="submit" class=" HeroSectionSearchButton">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24" class="sc-75474dbd-6 jdpWXI">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+             </button>
+             <input data-aid="input" name="searchKeyword"  [(ngModel)]="searchKeyword" type="search" placeholder="Search free high-resolution photos" class="sc-75474dbd-2 ZabQH" value="">
+          </form>
+          <div class="topics topicList xSy4N">
+            <ul role="listbox" class="ZW48e ruKGA oh0KJ">
+              <li role="option" id="react-autowhatever-1-section-0-item-0" aria-selected="true" data-section-index="0" data-suggestion-index="0">
+                 <div class="Vr6k5">
+                    <div class="VJoss m46Yv ob_1e">
+                       <div class="yfCAO" (click)="searchTopics('wallpapers')">Wallpapers</div>
+                    </div>
+                 </div>
+              </li>
+              <li role="option" id="react-autowhatever-1-section-0-item-1" aria-selected="false" data-section-index="0" data-suggestion-index="1">
+                 <div class="Vr6k5">
+                    <div class="VJoss m46Yv">
+                       <div class="yfCAO" (click)="searchTopics('nature')">Nature</div>
+                    </div>
+                 </div>
+              </li>
+              <li role="option" id="react-autowhatever-1-section-0-item-2" aria-selected="false" data-section-index="0" data-suggestion-index="2">
+                 <div class="Vr6k5">
+                    <div class="VJoss m46Yv">
+                       <div class="yfCAO"  (click)="searchTopics('architecture')">Archtecture</div>
+                    </div>
+                 </div>
+              </li>
+              <li role="option" id="react-autowhatever-1-section-0-item-3" aria-selected="false" data-section-index="0" data-suggestion-index="3">
+                 <div class="Vr6k5">
+                    <div class="VJoss m46Yv">
+                       <div class="yfCAO" (click)="searchTopics('fashion')">Fashion</div>
+                    </div>
+                 </div>
+              </li>
+              <li role="option" id="react-autowhatever-1-section-0-item-4" aria-selected="false" data-section-index="0" data-suggestion-index="4">
+                 <div class="Vr6k5">
+                    <div class="VJoss m46Yv">
+                       <div class="yfCAO" (click)="searchTopics('film')">Film</div>
+                    </div>
+                 </div>
+              </li>
+              <li role="option" id="react-autowhatever-1-section-0-item-4" aria-selected="false" data-section-index="0" data-suggestion-index="4">
+               <div class="Vr6k5">
+                  <div class="VJoss m46Yv">
+                     <div class="yfCAO" (click)="searchTopics('animals')">Animals</div>
+                  </div>
+               </div>
+            </li>
+           </ul>
+          </div>
+         
+       </div>
+    </div>
+  </section>
+  <div class="rJ2xz bYpwS U8eXG M5vdR">
+    <div>
+      <div class="container-fluid">
+         <div class="row">
+             <div class="col-xs-12 col-md-4 col-lg-3 mb-10" *ngFor="let card of Search">
+                 <img (click)="openDialog(card)" [src]="card.urls.raw + sizeImg" class="card-img-top">
+             </div>
+         </div>
+         </div>
+    </div>
+  </div>

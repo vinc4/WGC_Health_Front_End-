@@ -1,0 +1,53 @@
+.image-cont {
+    position: relative;
+    height: 100%;
+    width: 80%;
+}
+.image-cont img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.dialog {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.mat-dialog-container {
+    max-width: 80vw !important;
+    max-height: 80vh !important;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
+  }
+
+  img{
+    width: 600px;
+  }
+  .author-name{
+    margin-top: 10px;
+    text-align:center
+  }
+  figure.zoom {
+    background-position: 50% 50%;
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+figure.zoom img:hover {
+    opacity: 0;
+}
+figure.zoom img {
+    transition: opacity 0.5s;
+    display: block;
+    width: 100%;
+}
